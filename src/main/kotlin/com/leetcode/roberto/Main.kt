@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task242
+import com.leetcode.roberto.tasks.Task1
 
 fun main() {
-    Task242().run()
+    Task1().run()
 }
