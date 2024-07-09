@@ -1,6 +1,6 @@
 package com.leetcode.roberto.tasks
 
-class Task13RomanToInt {
+class Task13RomanToIntEasy {
     fun run() {
         val s = "MCMXCIV"
 

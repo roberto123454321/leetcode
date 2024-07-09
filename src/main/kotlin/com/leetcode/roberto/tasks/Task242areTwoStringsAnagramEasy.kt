@@ -1,6 +1,6 @@
 package com.leetcode.roberto.tasks
 
-class Task242 {
+class Task242areTwoStringsAnagramEasy {
     fun run() {
         val s = "yqhbicoumu"
         val t = "ouiuycbmqh"

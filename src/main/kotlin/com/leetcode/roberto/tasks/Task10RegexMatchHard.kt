@@ -37,7 +37,7 @@ package my.playground.leetcode.kotlin
  * p contains only lowercase English letters, '.', and '*'.
  * It is guaranteed for each appearance of the character '*', there will be a previous valid character to match.
  */
-class Task10 {
+class Task10RegexMatchHard {
     fun run() {
         val s = "abc"
         val p = "a***abc"

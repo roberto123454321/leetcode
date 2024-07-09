@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task1
+import com.leetcode.roberto.tasks.Task14LongestCommonPrefixEasy
 
 fun main() {
-    Task1().run()
+    Task14LongestCommonPrefixEasy().run()
 }
