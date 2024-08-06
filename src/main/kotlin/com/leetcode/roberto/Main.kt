@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task1768MergeStringsAlternatelyEasy
+import com.leetcode.roberto.tasks.Task933NumberOfRecentCallsEasy
 
 fun main() {
-    Task1768MergeStringsAlternatelyEasy().run()
+    Task933NumberOfRecentCallsEasy().run()
 }
