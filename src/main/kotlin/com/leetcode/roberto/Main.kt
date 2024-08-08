@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task933NumberOfRecentCallsEasy
+import com.leetcode.roberto.tasks.Task206ReverseLinkedListEasy
 
 fun main() {
-    Task933NumberOfRecentCallsEasy().run()
+    Task206ReverseLinkedListEasy().run()
 }
