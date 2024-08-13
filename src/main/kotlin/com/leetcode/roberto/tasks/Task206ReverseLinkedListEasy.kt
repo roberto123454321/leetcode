@@ -31,19 +31,19 @@ package com.leetcode.roberto.tasks
  */
 class Task206ReverseLinkedListEasy {
     fun run() {
-//        val li1 = ListNode(1)
-//        val li2 = ListNode(2)
-//        val li3 = ListNode(3)
-//        val li4 = ListNode(4)
-//        val li5 = ListNode(5)
-//
-//        li1.next = li2
-//        li2.next = li3
-//        li3.next = li4
-//        li4.next = li5
+        val li1 = ListNode(1)
+        val li2 = ListNode(2)
+        val li3 = ListNode(3)
+        val li4 = ListNode(4)
+        val li5 = ListNode(5)
 
-//        printList(li1)
-        val result = Solution().reverseList(null)
+        li1.next = li2
+        li2.next = li3
+        li3.next = li4
+        li4.next = li5
+
+        printList(li1)
+        val result = Solution().reverseList(li1)
         printList(result)
     }
 
@@ -68,27 +68,59 @@ class Task206ReverseLinkedListEasy {
     class Solution {
         fun reverseList(head: ListNode?): ListNode? {
             if (head == null) return head
+            if (head.next == null) return head
 
+            var inputList: ListNode = head
 
-            val dp = mutableListOf<Int>()
-            var node = head
+            //first construct last node of output list
+            var previousNode = ListNode(inputList.`val`)
+            previousNode.next = null
 
-            while (node?.`val` != null) {
-                dp.add(node.`val`)
-                node = node.next
+            var newNode: ListNode? = null
+            //while there are next elements in input linked list
+            while (inputList.next != null) {
+                //construct newNode where node.value is next value from input linked list and node.next is previousNode
+                newNode = ListNode(inputList.next!!.`val`)
+                newNode.next = previousNode
+
+                //previousNode in next loop iteration will be current newNode
+                previousNode = newNode
+
+                //proceed to next element in input linked list
+                inputList = inputList.next!!
             }
 
-            val resultHead = ListNode(dp[dp.lastIndex])
-            var resultNode : ListNode = resultHead
-
-            for (i in dp.lastIndex - 1 downTo 0) {
-                resultNode.next = ListNode(dp[i])
-                resultNode = resultNode.next!!
-            }
-
-            return resultHead
+            //return lastly constructed newNode which is first element of output list
+            return newNode
         }
     }
+
+    //my solution
+//    class Solution {
+//        fun reverseList(head: ListNode?): ListNode? {
+//            if (head == null) return head
+//
+//
+//            val dp = mutableListOf<Int>()
+//            var node = head
+//
+//            while (node?.`val` != null) {
+//                dp.add(node.`val`)
+//                node = node.next
+//            }
+//
+//            val resultHead = ListNode(dp[dp.lastIndex])
+//            var resultNode : ListNode = resultHead
+//
+//            for (i in dp.lastIndex - 1 downTo 0) {
+//                resultNode.next = ListNode(dp[i])
+//                resultNode = resultNode.next!!
+//            }
+//
+//            return resultHead
+//        }
+//    }
+
 
     class ListNode(var `val`: Int) {
         var next: ListNode? = null
