@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task206ReverseLinkedListEasy
+import com.leetcode.roberto.tasks.Task1732FindHighestAltitudeEasy
 
 fun main() {
-    Task206ReverseLinkedListEasy().run()
+    Task1732FindHighestAltitudeEasy().run()
 }
