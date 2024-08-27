@@ -1,8 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task104MaxDepthOfBinaryTree
-import com.leetcode.roberto.tasks.Task1732FindHighestAltitudeEasy
+import com.leetcode.roberto.tasks.Task700SearchBinaryTreeEasy
 
 fun main() {
-    Task104MaxDepthOfBinaryTree().run()
+    Task700SearchBinaryTreeEasy().run()
 }
