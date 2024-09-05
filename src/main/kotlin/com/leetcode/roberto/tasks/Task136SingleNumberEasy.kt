@@ -1,5 +1,7 @@
 package com.leetcode.roberto.tasks
 
+import java.util.HashMap
+
 /**
  * Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
  *
@@ -29,13 +31,31 @@ class Task136SingleNumberEasy {
         println(result)
     }
 
+//    most effective solution
+//    class Solution {
+//        fun singleNumber(nums: IntArray): Int {
+//            var result = 0
+//            for (num in nums) {
+//                result = result xor num
+//            }
+//            return result
+//        }
+//    }
+
+    /**
+     * iterate nums array
+     * store every element to map K:num V:count
+     *
+     * find element in map that has value 1 and return key
+     */
     class Solution {
         fun singleNumber(nums: IntArray): Int {
-            var result = 0
+            val map = HashMap<Int, Int>()
             for (num in nums) {
-                result = result xor num
+                var numCnt = map[num] ?: 0
+                map[num] = ++numCnt
             }
-            return result
+            return map.entries.find { it.value == 1 }!!.key
         }
     }
 
