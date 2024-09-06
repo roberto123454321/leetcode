@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task700SearchBinaryTreeEasy
+import com.leetcode.roberto.tasks.Task208ImplementTrieMedium
 
 fun main() {
-    Task700SearchBinaryTreeEasy().run()
+    Task208ImplementTrieMedium().run()
 }
