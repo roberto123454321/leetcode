@@ -40,66 +40,17 @@ class Task208ImplementTrieMedium {
     fun run() {
         val trie = Trie()
         trie.insert("apple")
-        trie.search("apple") // true
-        trie.search("app") // false
-        trie.startsWith("app") // true
+        println(trie.search("apple")) // true
+        println(trie.search("app")) // false
+        println(trie.startsWith("app")) // true
         trie.insert("app")
         trie.insert("al")
         trie.insert("c")
-        trie.search("app") // true
+        println(trie.search("app")) // true
     }
 
-    class Trie {
-        var root: Node
 
-        init {
-            root = Node()
-        }
 
-        fun insert(word: String) {
-            root.insert(word, 0)
-        }
-
-        fun search(word: String): Boolean {
-            return root.search(word, 0)
-        }
-
-        fun startsWith(prefix: String): Boolean {
-            return root.startsWith(prefix, 0)
-        }
-
-        inner class Node {
-            var nodes: Array<Node?> = arrayOfNulls(26)
-            var isEnd: Boolean = false
-
-            fun insert(word: String, idx: Int) {
-                if (idx >= word.length) return
-                val i = word[idx].code - 'a'.code
-                if (nodes[i] == null) {
-                    nodes[i] = Node()
-                }
-
-                if (idx == word.length - 1) nodes[i]!!.isEnd = true
-                nodes[i]!!.insert(word, idx + 1)
-            }
-
-            fun search(word: String, idx: Int): Boolean {
-                if (idx >= word.length) return false
-                val node = nodes[word[idx].code - 'a'.code] ?: return false
-                if (idx == word.length - 1 && node.isEnd) return true
-
-                return node.search(word, idx + 1)
-            }
-
-            fun startsWith(prefix: String, idx: Int): Boolean {
-                if (idx >= prefix.length) return false
-                val node = nodes[prefix[idx].code - 'a'.code] ?: return false
-                if (idx == prefix.length - 1) return true
-
-                return node.startsWith(prefix, idx + 1)
-            }
-        }
-    }
 
     /**
      * Your Trie object will be instantiated and called as such:
@@ -108,5 +59,128 @@ class Task208ImplementTrieMedium {
      * var param_2 = obj.search(word)
      * var param_3 = obj.startsWith(prefix)
      */
+
+    //my solution
+    class Trie {
+
+        private val rootNode = Node()
+
+        fun insert(word: String) {
+            rootNode.insert(word, 0)
+        }
+
+        fun search(word: String): Boolean {
+            return rootNode.search(word, 0)
+        }
+
+        fun startsWith(prefix: String): Boolean {
+            return rootNode.startsWith(prefix, 0)
+        }
+
+    }
+
+    class Node {
+
+        private var isEnd = false
+        private val nodeArray = arrayOfNulls<Node>(26)
+
+        fun insert(word: String, index: Int) {
+            if (word.length < index + 1) return
+
+            //check if at given index is stored a node
+            //if yes take out that node and call insert on that node
+            //if no create a node and call insert on it
+            val letterPosition = word.toCharArray()[index] - 'a'
+            var node = nodeArray[letterPosition]
+            if (node == null) {
+                node = Node()
+                nodeArray[letterPosition] = node
+            }
+
+            if (word.length == index + 1) {
+                node.isEnd = true
+            }
+
+            node.insert(word, index + 1)
+        }
+
+        fun search(word: String, index: Int): Boolean {
+            val letterPosition = word.toCharArray()[index] - 'a'
+
+            if (word.length == index + 1) {
+                val node = nodeArray[letterPosition]
+                return node != null && node.isEnd
+            }
+
+            val node = nodeArray[letterPosition] ?: return false
+            return node.search(word, index + 1)
+        }
+
+        fun startsWith(prefix: String, index: Int): Boolean {
+            val letterPosition = prefix.toCharArray()[index] - 'a'
+
+            if (prefix.length == index + 1) {
+                val node = nodeArray[letterPosition]
+                return node != null
+            }
+
+            val node = nodeArray[letterPosition] ?: return false
+            return node.startsWith(prefix, index + 1)
+        }
+    }
+
+
+    //copy pasted solution
+//    class Trie {
+//        var root: Node
+//
+//        init {
+//            root = Node()
+//        }
+//
+//        fun insert(word: String) {
+//            root.insert(word, 0)
+//        }
+//
+//        fun search(word: String): Boolean {
+//            return root.search(word, 0)
+//        }
+//
+//        fun startsWith(prefix: String): Boolean {
+//            return root.startsWith(prefix, 0)
+//        }
+//
+//        inner class Node {
+//            var nodes: Array<Node?> = arrayOfNulls(26)
+//            var isEnd: Boolean = false
+//
+//            fun insert(word: String, idx: Int) {
+//                if (idx >= word.length) return
+//                val i = word[idx].code - 'a'.code
+//                if (nodes[i] == null) {
+//                    nodes[i] = Node()
+//                }
+//
+//                if (idx == word.length - 1) nodes[i]!!.isEnd = true
+//                nodes[i]!!.insert(word, idx + 1)
+//            }
+//
+//            fun search(word: String, idx: Int): Boolean {
+//                if (idx >= word.length) return false
+//                val node = nodes[word[idx].code - 'a'.code] ?: return false
+//                if (idx == word.length - 1 && node.isEnd) return true
+//
+//                return node.search(word, idx + 1)
+//            }
+//
+//            fun startsWith(prefix: String, idx: Int): Boolean {
+//                if (idx >= prefix.length) return false
+//                val node = nodes[prefix[idx].code - 'a'.code] ?: return false
+//                if (idx == prefix.length - 1) return true
+//
+//                return node.startsWith(prefix, idx + 1)
+//            }
+//        }
+//    }
 
 }
