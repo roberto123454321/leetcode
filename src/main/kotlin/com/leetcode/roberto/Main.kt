@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task208ImplementTrieMedium
+import com.leetcode.roberto.tasks.Task283MoveZerosEasy
 
 fun main() {
-    Task208ImplementTrieMedium().run()
+    Task283MoveZerosEasy().run()
 }
