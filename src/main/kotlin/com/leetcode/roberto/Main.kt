@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task283MoveZerosEasy
+import com.leetcode.roberto.tasks.Task643MaxAvgArray
 
 fun main() {
-    Task283MoveZerosEasy().run()
+    Task643MaxAvgArray().run()
 }
