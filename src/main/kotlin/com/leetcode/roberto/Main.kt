@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task643MaxAvgArray
+import com.leetcode.roberto.tasks.Task2215FindDiffOf2Arrays
 
 fun main() {
-    Task643MaxAvgArray().run()
+    Task2215FindDiffOf2Arrays().run()
 }
