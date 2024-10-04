@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task2215FindDiffOf2Arrays
+import com.leetcode.roberto.tasks.Task2390RemoveStarsEasy
 
 fun main() {
-    Task2215FindDiffOf2Arrays().run()
+    Task2390RemoveStarsEasy().run()
 }

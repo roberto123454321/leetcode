@@ -31,7 +31,7 @@ package com.leetcode.roberto.tasks
  * -1000 <= nums1[i], nums2[i] <= 1000
  *
  */
-class Task2215FindDiffOf2Arrays {
+class Task2215FindDiffOf2ArraysEasy {
 
     fun run() {
 
