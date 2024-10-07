@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task2390RemoveStarsEasy
+import com.leetcode.roberto.tasks.Task199BinaryTreeRightSideViewMedium
 
 fun main() {
-    Task2390RemoveStarsEasy().run()
+    Task199BinaryTreeRightSideViewMedium().run()
 }
