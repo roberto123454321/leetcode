@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task199BinaryTreeRightSideViewMedium
+import com.leetcode.roberto.tasks.Task841KeysAndRoomsMedium
 
 fun main() {
-    Task199BinaryTreeRightSideViewMedium().run()
+    Task841KeysAndRoomsMedium().run()
 }
