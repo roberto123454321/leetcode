@@ -138,13 +138,46 @@ class Task1926NearestExitFromEntranceInMazeMedium {
      * return 0
      */
     fun run() {
-
-        val result = Solution().nearestExit(arrayOf(), intArrayOf())
+//        [['+','.','+','+','+','+','+'],
+        // ['+','.','+','.','.','.','+'],
+        // ['+','.','+','.','+','.','+'],
+        // ['+','.','.','.','+','.','+'],
+        // ['+','+','+','+','+','.','+']]
+        val result = Solution().nearestExit(arrayOf(charArrayOf('+','.','+','+','+','+','+'), charArrayOf('+','.','+','.','.','.','+'), charArrayOf('+','.','+','.','+','.','+'), charArrayOf('+','.','.','.','+','.','+'), charArrayOf('+','+','+','+','+','.','+')), intArrayOf(0, 1))
         println(result)
     }
 
     class Solution {
         fun nearestExit(maze: Array<CharArray>, entrance: IntArray): Int {
+
+            val m = maze.size
+            val n = maze[0].size
+
+            val queue = ArrayDeque<IntArray>()
+            queue.add(intArrayOf(entrance[0], entrance[1], 0))
+            maze[entrance[0]][entrance[1]] = '+'
+
+            while (queue.isNotEmpty()) {
+                val position = queue.removeFirst()
+                val baseX = position[0]
+                val baseY = position[1]
+                val distance = position[2]
+
+                // represents x,y coordinates of:  north             south              east              west
+                val directions = arrayOf(intArrayOf(0,1), intArrayOf(0, -1), intArrayOf(1,0), intArrayOf(-1, 0))
+
+                for (direction in directions) {
+                    val x = baseX + direction[0]
+                    val y = baseY + direction[1]
+
+                    if (x < 0 || x == m || y < 0 || y == n) continue
+                    if (maze[x][y] == '+') continue
+                    if (x == 0 || x == m-1 || y == 0 || y == n-1) return distance + 1
+
+                    maze[x][y] = '+'
+                    queue.add(intArrayOf(x, y, distance + 1))
+                }
+            }
             return -1
         }
     }
