@@ -1,7 +1,7 @@
 package com.leetcode.roberto
 
-import com.leetcode.roberto.tasks.Task1926NearestExitFromEntranceInMazeMedium
+import com.leetcode.roberto.tasks.Task374GuessNumberHigherOrLower
 
 fun main() {
-    Task1926NearestExitFromEntranceInMazeMedium().run()
+    Task374GuessNumberHigherOrLower().run()
 }
