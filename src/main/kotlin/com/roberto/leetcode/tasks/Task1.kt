@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 class Task1 {
     fun run() {
@@ -7,7 +7,7 @@ class Task1 {
         val nums = intArrayOf(3, 3)
         val target = 6
 
-        val result = Solution().twoSum(nums, target)
+        val result = com.roberto.leetcode.tasks.Task1.Solution().twoSum(nums, target)
         println(result.joinToString(" "))
     }
 

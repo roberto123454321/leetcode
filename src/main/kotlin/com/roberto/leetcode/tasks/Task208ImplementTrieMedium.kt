@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 
 /**
@@ -38,7 +38,7 @@ package com.leetcode.roberto.tasks
  */
 class Task208ImplementTrieMedium {
     fun run() {
-        val trie = Trie()
+        val trie = com.roberto.leetcode.tasks.Task208ImplementTrieMedium.Trie()
         trie.insert("apple")
         println(trie.search("apple")) // true
         println(trie.search("app")) // false
@@ -63,7 +63,7 @@ class Task208ImplementTrieMedium {
     //my solution
     class Trie {
 
-        private val rootNode = Node()
+        private val rootNode = com.roberto.leetcode.tasks.Task208ImplementTrieMedium.Node()
 
         fun insert(word: String) {
             rootNode.insert(word, 0)
@@ -82,7 +82,7 @@ class Task208ImplementTrieMedium {
     class Node {
 
         private var isEnd = false
-        private val nodeArray = arrayOfNulls<Node>(26)
+        private val nodeArray = arrayOfNulls<com.roberto.leetcode.tasks.Task208ImplementTrieMedium.Node>(26)
 
         fun insert(word: String, index: Int) {
             if (word.length < index + 1) return
@@ -93,7 +93,7 @@ class Task208ImplementTrieMedium {
             val letterPosition = word.toCharArray()[index] - 'a'
             var node = nodeArray[letterPosition]
             if (node == null) {
-                node = Node()
+                node = com.roberto.leetcode.tasks.Task208ImplementTrieMedium.Node()
                 nodeArray[letterPosition] = node
             }
 

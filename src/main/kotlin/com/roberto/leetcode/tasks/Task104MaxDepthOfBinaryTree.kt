@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 import kotlin.math.max
 
@@ -28,22 +28,22 @@ import kotlin.math.max
 class Task104MaxDepthOfBinaryTree {
 
     fun run() {
-        val ti1 = TreeNode(5)
-        val ti21 = TreeNode(5)
-        val ti22 = TreeNode(5)
+        val ti1 = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode(5)
+        val ti21 = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode(5)
+        val ti22 = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode(5)
         ti1.left = ti21
         ti1.right = ti22
-        val ti31 = TreeNode(5)
-        val ti32 = TreeNode(5)
+        val ti31 = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode(5)
+        val ti32 = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode(5)
         ti21.left = ti31
         ti21.right = ti32
-        val ti33 = TreeNode(5)
-        val ti34 = TreeNode(5)
+        val ti33 = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode(5)
+        val ti34 = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode(5)
         ti22.left = ti33
         ti22.right = ti34
 
 
-        val result = Solution().maxDepth(ti1)
+        val result = com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.Solution().maxDepth(ti1)
         println(result)
     }
 
@@ -58,7 +58,7 @@ class Task104MaxDepthOfBinaryTree {
      * }
      */
     class Solution {
-        fun maxDepth(root: TreeNode?): Int {
+        fun maxDepth(root: com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode?): Int {
             // remember depth level
             // go depth first approach
             // if no deeper level, return level
@@ -72,8 +72,8 @@ class Task104MaxDepthOfBinaryTree {
     }
 
     class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
+        var left: com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode? = null
+        var right: com.roberto.leetcode.tasks.Task104MaxDepthOfBinaryTree.TreeNode? = null
     }
 
 }

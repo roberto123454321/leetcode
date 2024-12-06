@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 import kotlin.math.max
 
@@ -36,7 +36,7 @@ class Task643MaxAvgArray {
 //        val result = Solution().findMaxAverage(array, 4)
 
         val array = intArrayOf(-1)
-        val result = Solution().findMaxAverage(array, 1)
+        val result = com.roberto.leetcode.tasks.Task643MaxAvgArray.Solution().findMaxAverage(array, 1)
         println(result)
     }
 

@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
@@ -30,7 +30,7 @@ class Task283MoveZerosEasy {
     fun run() {
         val nums = intArrayOf(-10, 5, 0, 1, 2)
         println(nums.contentToString())
-        Solution().moveZeroes(nums)
+        com.roberto.leetcode.tasks.Task283MoveZerosEasy.Solution().moveZeroes(nums)
         println(nums.contentToString())
     }
 

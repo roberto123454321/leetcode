@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 import kotlin.math.min
 
@@ -33,7 +33,7 @@ class Task14LongestCommonPrefixEasy {
     fun run() {
         val s = arrayOf("abflow","flow","flowly")
 
-        val result = Solution().longestCommonPrefix(s)
+        val result = com.roberto.leetcode.tasks.Task14LongestCommonPrefixEasy.Solution().longestCommonPrefix(s)
         println(result)
     }
 

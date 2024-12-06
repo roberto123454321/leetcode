@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * Given the head of a singly linked list, reverse the list, and return the reversed list.
@@ -31,11 +31,11 @@ package com.leetcode.roberto.tasks
  */
 class Task206ReverseLinkedListEasy {
     fun run() {
-        val li1 = ListNode(1)
-        val li2 = ListNode(2)
-        val li3 = ListNode(3)
-        val li4 = ListNode(4)
-        val li5 = ListNode(5)
+        val li1 = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode(1)
+        val li2 = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode(2)
+        val li3 = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode(3)
+        val li4 = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode(4)
+        val li5 = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode(5)
 
         li1.next = li2
         li2.next = li3
@@ -43,11 +43,11 @@ class Task206ReverseLinkedListEasy {
         li4.next = li5
 
         printList(li1)
-        val result = Solution().reverseList(li1)
+        val result = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.Solution().reverseList(li1)
         printList(result)
     }
 
-    private fun printList(result: ListNode?) {
+    private fun printList(result: com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode?) {
         var result1 = result
         while (result1?.`val` != null) {
             print("${result1.`val`} ")
@@ -66,21 +66,21 @@ class Task206ReverseLinkedListEasy {
      * }
      */
     class Solution {
-        fun reverseList(head: ListNode?): ListNode? {
+        fun reverseList(head: com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode?): com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode? {
             if (head == null) return head
             if (head.next == null) return head
 
-            var inputList: ListNode = head
+            var inputList: com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode = head
 
             //first construct last node of output list
-            var previousNode = ListNode(inputList.`val`)
+            var previousNode = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode(inputList.`val`)
             previousNode.next = null
 
-            var newNode: ListNode? = null
+            var newNode: com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode? = null
             //while there are next elements in input linked list
             while (inputList.next != null) {
                 //construct newNode where node.value is next value from input linked list and node.next is previousNode
-                newNode = ListNode(inputList.next!!.`val`)
+                newNode = com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode(inputList.next!!.`val`)
                 newNode.next = previousNode
 
                 //previousNode in next loop iteration will be current newNode
@@ -123,7 +123,7 @@ class Task206ReverseLinkedListEasy {
 
 
     class ListNode(var `val`: Int) {
-        var next: ListNode? = null
+        var next: com.roberto.leetcode.tasks.Task206ReverseLinkedListEasy.ListNode? = null
     }
 
 }

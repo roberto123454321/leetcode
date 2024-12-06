@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 import java.util.*
 
@@ -43,7 +43,7 @@ class Task2390RemoveStarsEasy {
 
     fun run() {
 
-        val result = Solution().removeStars("il**autonrd**cl**nh*up*afpizp****d*a****lst")
+        val result = com.roberto.leetcode.tasks.Task2390RemoveStarsEasy.Solution().removeStars("il**autonrd**cl**nh*up*afpizp****d*a****lst")
         //autonnlst
         // expected: "autonnlst"
         println(result)

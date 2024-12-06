@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * You are given an m x n matrix maze (0-indexed) with empty cells (represented as '.') and walls (represented as '+'). You are also given the entrance of the maze, where entrance = [entrancerow, entrancecol] denotes the row and column of the cell you are initially standing at.
@@ -143,7 +143,8 @@ class Task1926NearestExitFromEntranceInMazeMedium {
         // ['+','.','+','.','+','.','+'],
         // ['+','.','.','.','+','.','+'],
         // ['+','+','+','+','+','.','+']]
-        val result = Solution().nearestExit(arrayOf(charArrayOf('+','.','+','+','+','+','+'), charArrayOf('+','.','+','.','.','.','+'), charArrayOf('+','.','+','.','+','.','+'), charArrayOf('+','.','.','.','+','.','+'), charArrayOf('+','+','+','+','+','.','+')), intArrayOf(0, 1))
+        val result = com.roberto.leetcode.tasks.Task1926NearestExitFromEntranceInMazeMedium.Solution()
+            .nearestExit(arrayOf(charArrayOf('+','.','+','+','+','+','+'), charArrayOf('+','.','+','.','.','.','+'), charArrayOf('+','.','+','.','+','.','+'), charArrayOf('+','.','.','.','+','.','+'), charArrayOf('+','+','+','+','+','.','+')), intArrayOf(0, 1))
         println(result)
     }
 

@@ -1,10 +1,10 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 class Task13RomanToIntEasy {
     fun run() {
         val s = "MCMXCIV"
 
-        val result = Solution().romanToInt(s)
+        val result = com.roberto.leetcode.tasks.Task13RomanToIntEasy.Solution().romanToInt(s)
         println(result)
     }
 

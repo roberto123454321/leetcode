@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
@@ -31,7 +31,7 @@ class Task17LetterCombinationOfaPhoneNumber {
 
     fun run() {
 
-        val result = Solution().letterCombinations("23")
+        val result = com.roberto.leetcode.tasks.Task17LetterCombinationOfaPhoneNumber.Solution().letterCombinations("23")
         println(result)
     }
 

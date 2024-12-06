@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 import java.util.*
 
@@ -27,7 +27,8 @@ class Task275KlargestElementInArrayMedium {
 
     fun run() {
 
-        val result = Solution().findKthLargest(intArrayOf(6,5,8,4), 3)
+        val result = com.roberto.leetcode.tasks.Task275KlargestElementInArrayMedium.Solution()
+            .findKthLargest(intArrayOf(6,5,8,4), 3)
         println(result)
     }
 

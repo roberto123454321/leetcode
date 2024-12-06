@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
@@ -30,7 +30,7 @@ class Task1732FindHighestAltitudeEasy {
     fun run() {
         val array = intArrayOf(-4, -3,-2, -1, 4, 3, 2)
 
-        val result = Solution().largestAltitude(array)
+        val result = com.roberto.leetcode.tasks.Task1732FindHighestAltitudeEasy.Solution().largestAltitude(array)
         println(result)
     }
 

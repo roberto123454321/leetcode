@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
@@ -44,7 +44,7 @@ class Task1768MergeStringsAlternatelyEasy {
         val s1 = "abcdef"
         val s2 = "pqrstuvwxyz"
 
-        val result = Solution().mergeAlternately(s1, s2)
+        val result = com.roberto.leetcode.tasks.Task1768MergeStringsAlternatelyEasy.Solution().mergeAlternately(s1, s2)
         println(result)
     }
 

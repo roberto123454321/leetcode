@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * Given two 0-indexed integer arrays nums1 and nums2, return a list answer of size 2 where:
@@ -37,7 +37,7 @@ class Task2215FindDiffOf2ArraysEasy {
 
         val input1 = intArrayOf(1,2,3)
         val input2 = intArrayOf(2,3,4)
-        val result = Solution().findDifference(input1, input2)
+        val result = com.roberto.leetcode.tasks.Task2215FindDiffOf2ArraysEasy.Solution().findDifference(input1, input2)
         println(result)
     }
 

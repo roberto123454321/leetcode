@@ -1,11 +1,11 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 
 class Task374GuessNumberHigherOrLower {
 
     fun run() {
 
-        val result = Solution().guessNumber(10)
+        val result = com.roberto.leetcode.tasks.Task374GuessNumberHigherOrLower.Solution().guessNumber(10)
         println(result)
     }
 

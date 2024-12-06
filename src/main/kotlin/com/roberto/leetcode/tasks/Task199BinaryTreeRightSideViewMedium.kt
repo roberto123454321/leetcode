@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
@@ -28,11 +28,11 @@ package com.leetcode.roberto.tasks
 class Task199BinaryTreeRightSideViewMedium {
 
     fun run() {
-        val root = Solution.TreeNode(1)
-        root.left = Solution.TreeNode(2)
-        root.right = Solution.TreeNode(3)
+        val root = com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution.TreeNode(1)
+        root.left = com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution.TreeNode(2)
+        root.right = com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution.TreeNode(3)
 
-        val result = Solution().rightSideView(root)
+        val result = com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution().rightSideView(root)
         println(result)
     }
 
@@ -91,13 +91,13 @@ class Task199BinaryTreeRightSideViewMedium {
          *
          *
          */
-        fun rightSideView(root: TreeNode?): List<Int> {
+        fun rightSideView(root: com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution.TreeNode?): List<Int> {
             val rightViewList = mutableListOf<Int>()
             rightSideView(root, 0, rightViewList)
             return rightViewList
         }
 
-        private fun rightSideView(node: TreeNode?, level: Int, rightViewList: MutableList<Int>) {
+        private fun rightSideView(node: com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution.TreeNode?, level: Int, rightViewList: MutableList<Int>) {
             if (node == null) {
                 return
             }
@@ -112,8 +112,8 @@ class Task199BinaryTreeRightSideViewMedium {
 
 
         class TreeNode(var `val`: Int) {
-             var left: TreeNode? = null
-             var right: TreeNode? = null
+             var left: com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution.TreeNode? = null
+             var right: com.roberto.leetcode.tasks.Task199BinaryTreeRightSideViewMedium.Solution.TreeNode? = null
         }
     }
 

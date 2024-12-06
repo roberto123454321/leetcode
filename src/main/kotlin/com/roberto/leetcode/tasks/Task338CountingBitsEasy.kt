@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
@@ -41,7 +41,7 @@ class Task338CountingBitsEasy {
     fun run() {
         val int = 4
 
-        val result = Solution().countBits(int)
+        val result = com.roberto.leetcode.tasks.Task338CountingBitsEasy.Solution().countBits(int)
         println(result)
     }
 

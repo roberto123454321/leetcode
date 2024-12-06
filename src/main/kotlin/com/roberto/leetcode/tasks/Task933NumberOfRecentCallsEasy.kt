@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 import java.util.*
 
@@ -44,7 +44,7 @@ import java.util.*
 class Task933NumberOfRecentCallsEasy {
 
     fun run() {
-        val obj = RecentCounter()
+        val obj = com.roberto.leetcode.tasks.Task933NumberOfRecentCallsEasy.RecentCounter()
         println(obj.ping(1))
         println(obj.ping(100))
         println(obj.ping(3001))

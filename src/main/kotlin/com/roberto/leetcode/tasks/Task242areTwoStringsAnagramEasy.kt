@@ -1,11 +1,11 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 class Task242areTwoStringsAnagramEasy {
     fun run() {
         val s = "yqhbicoumu"
         val t = "ouiuycbmqh"
 
-        val result = Solution().isAnagram(s, t)
+        val result = com.roberto.leetcode.tasks.Task242areTwoStringsAnagramEasy.Solution().isAnagram(s, t)
         println(result)
     }
 

@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 import java.util.HashMap
 
@@ -27,7 +27,7 @@ class Task136SingleNumberEasy {
     fun run() {
         val array = intArrayOf(2,2,1)
 
-        val result = Solution().singleNumber(array)
+        val result = com.roberto.leetcode.tasks.Task136SingleNumberEasy.Solution().singleNumber(array)
         println(result)
     }
 

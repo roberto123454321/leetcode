@@ -1,4 +1,4 @@
-package com.leetcode.roberto.tasks
+package com.roberto.leetcode.tasks
 
 /**
  * You are given the root of a binary search tree (BST) and an integer val.
@@ -29,23 +29,23 @@ package com.leetcode.roberto.tasks
 class Task700SearchBinaryTreeEasy {
 
     fun run() {
-        val ti1 = TreeNode(4)
-        val ti21 = TreeNode(2)
-        val ti22 = TreeNode(7)
+        val ti1 = com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode(4)
+        val ti21 = com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode(2)
+        val ti22 = com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode(7)
         ti1.left = ti21
         ti1.right = ti22
-        val ti31 = TreeNode(1)
-        val ti32 = TreeNode(3)
+        val ti31 = com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode(1)
+        val ti32 = com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode(3)
         ti21.left = ti31
         ti21.right = ti32
 
-        val result = Solution().searchBST(ti1, 7)
+        val result = com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.Solution().searchBST(ti1, 7)
 
         printResult(result)
 
     }
 
-    private fun printResult(result: TreeNode?) {
+    private fun printResult(result: com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode?) {
         if (result == null) return
         print("${result.`val`} ")
         printResult(result.left)
@@ -76,7 +76,7 @@ class Task700SearchBinaryTreeEasy {
 //            if (root.`val` > `val`) return searchBST(root.left, `val`) else return searchBST(root.right, `val`)
 //        }
 
-        fun searchBST(root: TreeNode?, `val`: Int): TreeNode? {
+        fun searchBST(root: com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode?, `val`: Int): com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode? {
             var currentNode = root
 
             while (currentNode != null && currentNode.`val` != `val`) {
@@ -88,7 +88,7 @@ class Task700SearchBinaryTreeEasy {
     }
 
     class TreeNode(var `val`: Int) {
-        var left: TreeNode? = null
-        var right: TreeNode? = null
+        var left: com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode? = null
+        var right: com.roberto.leetcode.tasks.Task700SearchBinaryTreeEasy.TreeNode? = null
     }
 }
