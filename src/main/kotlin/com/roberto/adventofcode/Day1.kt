@@ -4,6 +4,9 @@ import java.io.FileReader
 import kotlin.math.abs
 
 class Day1 {
+    /**
+     * 2769675
+     */
     fun countDistance() : Int {
         val (leftList, rightList) = loadInputToList()
         leftList.sort()
@@ -17,18 +20,9 @@ class Day1 {
         return distance
     }
 
-    private fun loadInputToList(): Pair<MutableList<Int>, MutableList<Int>> {
-        val leftList = mutableListOf<Int>()
-        val rightList = mutableListOf<Int>()
-        FileReader("C:\\Projects\\leetcode\\src\\main\\kotlin\\com\\roberto\\adventofcode\\Day1Input.txt").readLines()
-            .asSequence().forEach {
-                val nums = it.split("   ")
-                leftList.add(nums[0].toInt())
-                rightList.add(nums[1].toInt())
-            }
-        return Pair(leftList, rightList)
-    }
-
+    /**
+     * 24643097
+     */
     fun countSimilarityScore(): Int {
         val (leftList, rightList) = loadInputToList()
 
@@ -37,5 +31,17 @@ class Day1 {
         leftList.filter { numAppearanceCountMap.containsKey(it) }.forEach { similarity += it * numAppearanceCountMap[it]!! }
 
         return similarity
+    }
+
+    private fun loadInputToList(): Pair<MutableList<Int>, MutableList<Int>> {
+        val leftList = mutableListOf<Int>()
+        val rightList = mutableListOf<Int>()
+        FileReader("src/main/resources/adventofcode/Day1Input.txt").readLines()
+            .asSequence().forEach {
+                val nums = it.split("   ")
+                leftList.add(nums[0].toInt())
+                rightList.add(nums[1].toInt())
+            }
+        return Pair(leftList, rightList)
     }
 }
