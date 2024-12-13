@@ -1,8 +1,7 @@
 package com.roberto
 
-import com.roberto.adventofcode.Day1
+import com.roberto.adventofcode.Day2
 
 fun main() {
-    println(Day1().countDistance())
-    println(Day1().countSimilarityScore())
+    println(Day2().countSafeReportsWithProblemDampener())
 }

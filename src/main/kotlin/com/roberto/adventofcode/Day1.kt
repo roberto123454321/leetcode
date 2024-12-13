@@ -3,6 +3,7 @@ package com.roberto.adventofcode
 import java.io.FileReader
 import kotlin.math.abs
 
+
 class Day1 {
     /**
      * 2769675
@@ -36,7 +37,7 @@ class Day1 {
     private fun loadInputToList(): Pair<MutableList<Int>, MutableList<Int>> {
         val leftList = mutableListOf<Int>()
         val rightList = mutableListOf<Int>()
-        FileReader("src/main/resources/adventofcode/Day1Input.txt").readLines()
+        FileReader("${PATH_TO_INPUT_FILES_DIR}/Day1Input.txt").readLines()
             .asSequence().forEach {
                 val nums = it.split("   ")
                 leftList.add(nums[0].toInt())
