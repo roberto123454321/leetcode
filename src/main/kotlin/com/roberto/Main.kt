@@ -1,7 +1,7 @@
 package com.roberto
 
-import com.roberto.adventofcode.Day2
+import com.roberto.adventofcode.Day3
 
 fun main() {
-    println(Day2().countSafeReportsWithProblemDampener())
+    println(Day3().task2())
 }
