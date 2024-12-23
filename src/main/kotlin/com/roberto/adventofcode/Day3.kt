@@ -87,7 +87,7 @@ class Day3 {
     }
 
     private fun addMul(mul: String): Int {
-        val nums = "(-?\\d+)".toRegex().findAll(mul).map { it.value.toInt() }.toList()
+        val nums = "(\\d+)".toRegex().findAll(mul).map { it.value.toInt() }.toList()
         return nums[0] * nums[1]
     }
 
@@ -146,11 +146,11 @@ class Day3 {
 //        return result
 //    }
 
+//    private fun loadInputLines(): List<String> {
+//        return FileReader("${PATH_TO_INPUT_FILES_DIR}/Day3Input.txt").readLines()
+//    }
+
     private fun loadInput(): String {
         return FileReader("${PATH_TO_INPUT_FILES_DIR}/Day3Input.txt").readText()
-    }
-
-    private fun loadInputLines(): List<String> {
-        return FileReader("${PATH_TO_INPUT_FILES_DIR}/Day3Input.txt").readLines()
     }
 }
