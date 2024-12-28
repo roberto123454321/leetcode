@@ -1,7 +1,7 @@
 package com.roberto
 
-import com.roberto.adventofcode.Day5
+import com.roberto.adventofcode.Day6
 
 fun main() {
-    println(Day5().task1())
+    println(Day6().task1())
 }

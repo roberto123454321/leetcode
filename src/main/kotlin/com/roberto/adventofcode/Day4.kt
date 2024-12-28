@@ -1,7 +1,5 @@
 package com.roberto.adventofcode
 
-import java.io.FileReader
-
 class Day4 {
 
     /**
@@ -10,7 +8,7 @@ class Day4 {
      */
     fun task1(): Int {
         // load input to 2d char array
-        val (rows, columns, charArray: Array<Array<Char>>) = load2dArray()
+        val (rows, columns, charArray: Array<Array<Char>>) = load2dArray("Day4Input.txt")
 
         // go through every char in array
         // check every direction if it does not contain word XMAS
@@ -73,7 +71,7 @@ class Day4 {
      */
     fun task2(): Int {
         // load input to 2d char array
-        val (rows, columns, charArray: Array<Array<Char>>) = load2dArray()
+        val (rows, columns, charArray: Array<Array<Char>>) = load2dArray("Day4Input.txt")
 
         //go through each char in array until you find A char
         //check boundaries
@@ -107,22 +105,5 @@ class Day4 {
                 charArray[i - 1][j + 1] == neChar &&
                 charArray[i + 1][j - 1] == swChar &&
                 charArray[i + 1][j + 1] == seChar
-    }
-
-    private fun load2dArray(): Triple<Int, Int, Array<Array<Char>>> {
-        val inputLines = loadInputLines()
-        val rows = inputLines.size
-        val columns = inputLines[0].length
-        val charArray: Array<Array<Char>> = Array(columns) { Array(rows) { '\u0000' } }
-        inputLines.forEachIndexed { columnIndex, line ->
-            line.forEachIndexed { charIndex, char ->
-                charArray[columnIndex][charIndex] = char
-            }
-        }
-        return Triple(rows, columns, charArray)
-    }
-
-    private fun loadInputLines(): List<String> {
-        return FileReader("${PATH_TO_INPUT_FILES_DIR}/Day4Input.txt").readLines()
     }
 }
