@@ -1,6 +1,27 @@
 package com.roberto.adventofcode
 
+private const val INPUT_FILE = "Day7Input.txt"
+
 class Day7 {
+
+    /**
+     * 105517128211543
+     */
+    fun task2(): Long {
+        val resultWithNumbersPairs = loadInputToResultWithNumbersPairs()
+        var result = 0L
+        for (resultNumbersPair in resultWithNumbersPairs) {
+            val numbersCount = resultNumbersPair.second.size
+            val operators = generateOperators(numbersCount, listOf("+", "*", "|"))
+
+            if (canExpectedResultBeCalculated(resultNumbersPair, operators)) {
+                result += resultNumbersPair.first
+            }
+        }
+
+        return result
+    }
+
     /**
      * 3245122495150
      */
@@ -13,14 +34,7 @@ class Day7 {
          * -- after semicolumn are numbers
          * --- divide string by " " and store to list
          */
-        val inputLines = loadInputLines("Day7Input.txt")
-        val resultWithNumbersPairs = mutableListOf<Pair<Long, List<Int>>>()
-        for (line in inputLines) {
-            val splitLine = line.split(":")
-            val expectedResult = splitLine[0].toLong()
-            val numbers = splitLine[1].drop(1).split(" ").map { it.toInt() }.toList()
-            resultWithNumbersPairs.add(Pair(expectedResult, numbers))
-        }
+        val resultWithNumbersPairs = loadInputToResultWithNumbersPairs()
 
         /**
          * for every pair of result and numbers do
@@ -37,7 +51,7 @@ class Day7 {
         var result = 0L
         for (resultNumbersPair in resultWithNumbersPairs) {
             val numbersCount = resultNumbersPair.second.size
-            val operators = generateOperators(numbersCount)
+            val operators = generateOperators(numbersCount, listOf("+", "*"))
 
             if (canExpectedResultBeCalculated(resultNumbersPair, operators)) {
                 result += resultNumbersPair.first
@@ -45,6 +59,18 @@ class Day7 {
         }
 
         return result
+    }
+
+    private fun loadInputToResultWithNumbersPairs(): MutableList<Pair<Long, List<Int>>> {
+        val inputLines = loadInputLines(INPUT_FILE)
+        val resultWithNumbersPairs = mutableListOf<Pair<Long, List<Int>>>()
+        for (line in inputLines) {
+            val splitLine = line.split(":")
+            val expectedResult = splitLine[0].toLong()
+            val numbers = splitLine[1].drop(1).split(" ").map { it.toInt() }.toList()
+            resultWithNumbersPairs.add(Pair(expectedResult, numbers))
+        }
+        return resultWithNumbersPairs
     }
 
     private fun canExpectedResultBeCalculated(resultNumbersPair: Pair<Long, List<Int>>, operators: MutableList<String>): Boolean {
@@ -76,20 +102,21 @@ class Day7 {
             when (operators[i - 1]) {
                 '+' -> result += numbers[i]
                 '*' -> result *= numbers[i]
+                '|' -> result = "$result${numbers[i]}".toLong()
                 else -> throw IllegalArgumentException("Unknown operator $operators")
             }
         }
         return result
     }
 
-    private fun generateOperators(numbersCount: Int): MutableList<String> {
+    private fun generateOperators(numbersCount: Int, inputOperators: List<String>): MutableList<String> {
         if (numbersCount < 2) {
             throw IllegalArgumentException("At least 2 numbers are required")
         }
 
-        val operators = mutableListOf<String>()
-        generateOperators(0, "", listOf("+", "*"), numbersCount, operators)
-        return operators
+        val generatedOperators = mutableListOf<String>()
+        generateOperators(0, "", inputOperators, numbersCount, generatedOperators)
+        return generatedOperators
     }
 
     private fun generateOperators(depth: Int, result: String, operators: List<String>, numbersCount: Int, results: MutableList<String>) {
