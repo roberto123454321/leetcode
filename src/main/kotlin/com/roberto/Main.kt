@@ -1,7 +1,7 @@
 package com.roberto
 
-import com.roberto.adventofcode.year2024.Day7
+import com.roberto.leetcode.tasks.Task739DailyTemperaturesMedium
 
 fun main() {
-    println(Day7().task2())
+    println(Task739DailyTemperaturesMedium().run())
 }
