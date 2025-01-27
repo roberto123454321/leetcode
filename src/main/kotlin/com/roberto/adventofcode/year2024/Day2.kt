@@ -1,4 +1,4 @@
-package com.roberto.adventofcode
+package com.roberto.adventofcode.year2024
 
 import java.io.FileReader
 import kotlin.math.abs
@@ -151,7 +151,7 @@ class Day2 {
 //    }
 
     private fun loadReports(): MutableList<MutableList<Int>> {
-        val reports = FileReader("${PATH_TO_INPUT_FILES_DIR}/Day2Input.txt").readLines()
+        val reports = FileReader("$PATH_TO_INPUT_FILES_DIR/Day2Input.txt").readLines()
             .asSequence()
             .map {
                 it.split(" ")

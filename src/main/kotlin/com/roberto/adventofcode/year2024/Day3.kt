@@ -1,4 +1,4 @@
-package com.roberto.adventofcode
+package com.roberto.adventofcode.year2024
 
 import java.io.FileReader
 
@@ -151,6 +151,6 @@ class Day3 {
 //    }
 
     private fun loadInput(): String {
-        return FileReader("${PATH_TO_INPUT_FILES_DIR}/Day3Input.txt").readText()
+        return FileReader("$PATH_TO_INPUT_FILES_DIR/Day3Input.txt").readText()
     }
 }

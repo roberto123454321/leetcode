@@ -1,4 +1,4 @@
-package com.roberto.adventofcode
+package com.roberto.adventofcode.year2024
 
 private const val INPUT_FILE = "Day7Input.txt"
 

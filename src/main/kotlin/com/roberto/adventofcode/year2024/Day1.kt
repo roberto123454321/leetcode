@@ -1,4 +1,4 @@
-package com.roberto.adventofcode
+package com.roberto.adventofcode.year2024
 
 import java.io.FileReader
 import kotlin.math.abs
@@ -37,7 +37,7 @@ class Day1 {
     private fun loadInputToList(): Pair<MutableList<Int>, MutableList<Int>> {
         val leftList = mutableListOf<Int>()
         val rightList = mutableListOf<Int>()
-        FileReader("${PATH_TO_INPUT_FILES_DIR}/Day1Input.txt").readLines()
+        FileReader("$PATH_TO_INPUT_FILES_DIR/Day1Input.txt").readLines()
             .asSequence().forEach {
                 val nums = it.split("   ")
                 leftList.add(nums[0].toInt())

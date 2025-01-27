@@ -1,11 +1,11 @@
-package com.roberto.adventofcode
+package com.roberto.adventofcode.year2024
 
 import java.io.FileReader
 
 const val PATH_TO_INPUT_FILES_DIR = "src/main/resources/adventofcode"
 
 fun loadInputLines(fileName: String): List<String> {
-    return FileReader("${PATH_TO_INPUT_FILES_DIR}/${fileName}").readLines()
+    return FileReader("$PATH_TO_INPUT_FILES_DIR/${fileName}").readLines()
 }
 
 fun load2dArray(fileName: String): Triple<Int, Int, Array<Array<Char>>> {

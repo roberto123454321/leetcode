@@ -1,4 +1,4 @@
-package com.roberto.adventofcode
+package com.roberto.adventofcode.year2024
 
 private const val MAX_STEPS_COUNT = 50_000
 
