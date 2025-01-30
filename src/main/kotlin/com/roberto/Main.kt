@@ -1,7 +1,7 @@
 package com.roberto
 
-import com.roberto.leetcode.tasks.Task739DailyTemperaturesMedium
+import com.roberto.leetcode.tasks.Task435NonOverlappingIntervalsMedium
 
 fun main() {
-    println(Task739DailyTemperaturesMedium().run())
+    Task435NonOverlappingIntervalsMedium().run()
 }
