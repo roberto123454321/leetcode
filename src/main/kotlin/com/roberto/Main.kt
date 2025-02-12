@@ -1,7 +1,7 @@
 package com.roberto
 
-import com.roberto.leetcode.tasks.Task1137TribonacciNumberMedium
+import com.roberto.leetcode.tasks.Task62UniquePathsMedium
 
 fun main() {
-    Task1137TribonacciNumberMedium().run()
+    Task62UniquePathsMedium().run()
 }
