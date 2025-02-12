@@ -1,7 +1,7 @@
 package com.roberto
 
-import com.roberto.leetcode.tasks.Task435NonOverlappingIntervalsMedium
+import com.roberto.leetcode.tasks.Task1137TribonacciNumberMedium
 
 fun main() {
-    Task435NonOverlappingIntervalsMedium().run()
+    Task1137TribonacciNumberMedium().run()
 }
